@@ -1,0 +1,16 @@
+CREATE TABLE [dbo].[PEDIDOS]
+(
+[idPedido] [int] NOT NULL,
+[sucursalRecojo] [int] NULL,
+[idCliente] [int] NULL,
+[horaRecojo] [time] NULL,
+[Telefono] [int] NULL,
+[Imagen] [image] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PEDIDOS] ADD CONSTRAINT [PK__PEDIDOS__A9F619B73DF17A0E] PRIMARY KEY CLUSTERED  ([idPedido]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PEDIDOS] ADD CONSTRAINT [FK__PEDIDOS__idClien__5535A963] FOREIGN KEY ([idCliente]) REFERENCES [dbo].[CLIENTE] ([Cedula])
+GO
+ALTER TABLE [dbo].[PEDIDOS] ADD CONSTRAINT [FK__PEDIDOS__sucursa__5441852A] FOREIGN KEY ([sucursalRecojo]) REFERENCES [dbo].[SUCURSAL] ([idSucursal])
+GO
