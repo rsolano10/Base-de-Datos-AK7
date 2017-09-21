@@ -5,7 +5,8 @@ CREATE TABLE [dbo].[DOCTORES]
 [numDoctor] [int] NULL,
 [Nombre] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL,
 [pApellido] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL,
-[sApellido] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL
+[sApellido] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL,
+[Nacimiento] [date] NULL
 ) ON [PRIMARY]
 GO
 ALTER TABLE [dbo].[DOCTORES] ADD CONSTRAINT [PK__DOCTORES__B4ADFE39290EE2E4] PRIMARY KEY CLUSTERED  ([Cedula]) ON [PRIMARY]
