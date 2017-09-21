@@ -1,9 +1,0 @@
-CREATE TABLE [dbo].[ROLES]
-(
-[idRol] [int] NOT NULL,
-[Nombre] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL,
-[Descripcion] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL
-) ON [PRIMARY]
-GO
-ALTER TABLE [dbo].[ROLES] ADD CONSTRAINT [PK__ROLES__3C872F76C57D1BAA] PRIMARY KEY CLUSTERED  ([idRol]) ON [PRIMARY]
-GO
