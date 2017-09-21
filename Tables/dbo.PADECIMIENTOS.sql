@@ -1,0 +1,13 @@
+CREATE TABLE [dbo].[PADECIMIENTOS]
+(
+[idPadecimiento] [int] NOT NULL,
+[idUsuario] [int] NULL,
+[Fecha] [date] NULL,
+[Nombre] [varchar] (20) COLLATE Modern_Spanish_CI_AS NULL,
+[Descripcion] [varchar] (50) COLLATE Modern_Spanish_CI_AS NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PADECIMIENTOS] ADD CONSTRAINT [PK__PADECIMI__D21C34317B9F9D20] PRIMARY KEY CLUSTERED  ([idPadecimiento]) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[PADECIMIENTOS] ADD CONSTRAINT [FK__PADECIMIE__idUsu__4F7CD00D] FOREIGN KEY ([idUsuario]) REFERENCES [dbo].[CLIENTE] ([Cedula])
+GO
